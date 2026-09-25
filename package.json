@@ -1,11 +1,22 @@
 {
   "name": "ilmari-plugin-loki",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ilmari log sink that pushes every task event to Grafana Loki.",
   "type": "module",
   "main": "dist/index.js",
   "license": "Apache-2.0",
-  "keywords": ["ilmari", "ilmari-plugin", "loki", "grafana"],
-  "engines": { "node": ">=24" },
-  "scripts": { "test": "node --test test/*.test.mjs" }
+  "keywords": [
+    "ilmari",
+    "ilmari-plugin",
+    "loki",
+    "grafana"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "dashboards": "node scripts/build-dashboards.mjs",
+    "demo": "node scripts/demo-events.mjs"
+  }
 }
